@@ -12,22 +12,39 @@ void main() {
   runApp(const PortfolioApp());
 }
 
-class PortfolioApp extends StatelessWidget {
+class PortfolioApp extends StatefulWidget {
   const PortfolioApp({super.key});
+
+  @override
+  State<PortfolioApp> createState() => _PortfolioAppState();
+}
+
+class _PortfolioAppState extends State<PortfolioApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  void _toggleTheme() {
+    setState(() {
+      _themeMode =
+          _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Belal Mostafa | Flutter Developer',
-      theme: buildTheme(),
-      home: const PortfolioHomePage(),
+      theme: buildLightTheme(),
+      darkTheme: buildDarkTheme(),
+      themeMode: _themeMode,
+      home: PortfolioHomePage(onToggleTheme: _toggleTheme),
     );
   }
 }
 
 class PortfolioHomePage extends StatefulWidget {
-  const PortfolioHomePage({super.key});
+  final VoidCallback onToggleTheme;
+  const PortfolioHomePage({super.key, required this.onToggleTheme});
 
   @override
   State<PortfolioHomePage> createState() => _PortfolioHomePageState();
@@ -47,7 +64,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
     if (ctx == null) return;
     await Scrollable.ensureVisible(
       ctx,
-      alignment: 0.2  ,
+      alignment: 0.2,
       duration: const Duration(milliseconds: 600),
       curve: Curves.easeInOut,
     );
@@ -84,6 +101,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
           onSkillsTap: () => _scrollTo(_skillsKey),
           onProjectsTap: () => _scrollTo(_projectsKey),
           onContactTap: () => _scrollTo(_contactKey),
+          onToggleTheme: widget.onToggleTheme, // ← زر التبديل
         ),
       ),
     );

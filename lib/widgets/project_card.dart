@@ -41,7 +41,7 @@ class _ProjectCardState extends State<ProjectCard> {
           boxShadow: _hovered
               ? [
                   BoxShadow(
-                      color: onSurface.withOpacity(0.08),
+                      color: onSurface.withValues(alpha: 0.08),
                       blurRadius: 18,
                       offset: const Offset(0, 10))
                 ]
@@ -71,7 +71,7 @@ class _ProjectCardState extends State<ProjectCard> {
                               onPressed: () =>
                                   launchUrlString(widget.githubUrl!),
                               icon: const Icon(Icons.code, size: 17),
-                              label: FittedBox(
+                              label: const FittedBox(
                                 fit: BoxFit.scaleDown,
                                 child: Text('Source Code'),
                               ),
@@ -83,7 +83,7 @@ class _ProjectCardState extends State<ProjectCard> {
                             child: FilledButton.icon(
                               onPressed: () => launchUrlString(widget.liveUrl!),
                               icon: const Icon(Icons.open_in_new, size: 17),
-                              label: FittedBox(
+                              label: const FittedBox(
                                 fit: BoxFit.scaleDown,
                                 child: Text('Live Demo'),
                               ),

@@ -1,3 +1,4 @@
+import 'package:belal_portfolio/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
 class AboutSection extends StatelessWidget {
@@ -14,18 +15,13 @@ class AboutSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            "About Me",
-            style: theme.textTheme.headlineMedium?.copyWith(
-              fontSize: 32,
-              fontWeight: FontWeight.bold,
-              color: theme.colorScheme.onSurface,
-            ),
-            textAlign: TextAlign.center,
+          const SizedBox(height: 15),
+          const Column(
+            children: [
+              CustomTitle(title: "About Me", icon: Icons.person),
+            ],
           ),
           const SizedBox(height: 32),
-
-          
           LayoutBuilder(
             builder: (context, constraints) {
               if (constraints.maxWidth > 800) {

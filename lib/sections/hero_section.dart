@@ -66,7 +66,7 @@ class _HeroSectionState extends State<HeroSection>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Theme.of(context).colorScheme.primary.withOpacity(0.08),
+            Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
             Colors.transparent,
           ],
         ),
@@ -94,9 +94,9 @@ class _HeroDesktop extends StatelessWidget {
   const _HeroDesktop();
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [
+      children: [
         Expanded(child: _HeroTexts()),
         SizedBox(width: 40),
         _HeroAvatar(size: 220),
@@ -109,8 +109,8 @@ class _HeroTablet extends StatelessWidget {
   const _HeroTablet();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
+    return const Column(
+      children: [
         _HeroAvatar(size: 180),
         SizedBox(height: 24),
         _HeroTexts(center: true),
@@ -123,8 +123,8 @@ class _HeroMobile extends StatelessWidget {
   const _HeroMobile();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
+    return const Column(
+      children: [
         _HeroAvatar(size: 120),
         SizedBox(height: 20),
         _HeroTexts(center: true, isMobile: true),
@@ -157,7 +157,7 @@ class _HeroTexts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final name = 'Belal Mostafa';
+    const name = 'Belal Mostafa';
     final title = TextSpan(
       text: "Hi, I'm ",
       style: Theme.of(context).textTheme.displayMedium!.copyWith(
@@ -211,7 +211,7 @@ class _HeroTexts extends StatelessWidget {
             children: [
               FilledButton.icon(
                 onPressed: () => launchUrlString(
-                    'https://drive.google.com/file/d/1aijjqvDOEKEbrT0INxeX0CbZQgd9nADw/view?usp=drive_link'),
+                    'https://drive.google.com/file/d/1iS3NwNSTe16UyJPOrNboDvDpmN5_PTUA/view?usp=drive_link'),
                 icon: const Icon(Icons.download),
                 label: const Text('Download CV'),
               ),

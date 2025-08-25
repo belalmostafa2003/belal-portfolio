@@ -1,3 +1,4 @@
+import 'package:belal_portfolio/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../core/responsive.dart';
@@ -20,9 +21,11 @@ class ContactSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('Get In Touch',
-              style: Theme.of(context).textTheme.displaySmall ??
-                  const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+          const Column(
+            children: [
+              CustomTitle(title: "Get In Touch", icon: Icons.person),
+            ],
+          ),
           const SizedBox(height: 62),
           Wrap(
             spacing: 12,

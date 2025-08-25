@@ -1,3 +1,4 @@
+import 'package:belal_portfolio/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 import '../core/responsive.dart';
 
@@ -60,13 +61,13 @@ class SkillsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Skills',
-            style: Theme.of(context).textTheme.displaySmall ??
-                const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          const SizedBox(height: 15),
+          const Column(
+            children: [
+              CustomTitle(title: "Skills", icon: Icons.person),
+            ],
           ),
-          const SizedBox(height: 24),
-
+          const SizedBox(height: 40),
           for (var entry in skillCategories.entries) ...[
             Text(
               entry.key,
@@ -112,7 +113,7 @@ class _SkillIcon extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 16, color: Theme.of(context).primaryColor),
+          Icon(icon, size: 16, color: Theme.of(context).iconTheme.color),
           const SizedBox(height: 6),
           Text(
             label,
