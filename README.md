@@ -1,16 +1,17 @@
-# belal_portfolio
+# 🌐 My Portfolio
 
-A new Flutter project.
+Welcome to my personal portfolio website! 🚀  
+This project showcases my skills, projects, and experience as a Flutter developer.  
 
-## Getting Started
+## ✨ Features
+- Responsive design (works on mobile, tablet, and desktop) 📱💻  
+- Light/Dark theme support 🌙☀️  
+- Smooth animations and clean UI ✨  
+- Sections: About Me, Skills, Projects, Contact  
 
-This project is a starting point for a Flutter application.
+## 🛠️ Tech Stack
+- **Flutter** (Web)  
+- **Dart**  
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Live Demo
+Check out the live version here 👉 []
