@@ -211,7 +211,7 @@ class _HeroTexts extends StatelessWidget {
             children: [
               FilledButton.icon(
                 onPressed: () => launchUrlString(
-                    'https://drive.google.com/file/d/1iS3NwNSTe16UyJPOrNboDvDpmN5_PTUA/view?usp=drive_link'),
+                    'https://drive.google.com/file/d/1kmrlCrT3McWFUx4y-1hoiQFHjT3uG99V/view?usp=drive_link'),
                 icon: const Icon(Icons.download),
                 label: const Text('Download CV'),
               ),
