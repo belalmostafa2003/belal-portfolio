@@ -39,6 +39,13 @@ class ProjectsSection extends StatelessWidget {
       const ProjectCard(
         title: 'Go Chat App',
         description: 'Flutter + Firebase Auth + Firestore real-time chat.',
+        githubUrl: 'https://github.com/belalmostafa2003/go_chat.git',
+        liveUrl:
+            'https://www.linkedin.com/posts/belal-mostafa-aa6904232_flutter-firebase-mobiledevelopment-activity-7374809857973116928-MuBT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADonrR4BJGKZcokovQbpNuMb4Wy33BRx2mo',
+      ),
+      const ProjectCard(
+        title: 'Go Chat App',
+        description: 'Flutter + Firebase Auth + Firestore real-time chat.',
         githubUrl: 'https://github.com/belalmostafa2003/go_chat',
         liveUrl:
             'https://www.linkedin.com/posts/belal-mostafa-aa6904232_flutter-firebase-mobiledevelopment-activity-7374809857973116928-MuBT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADonrR4BJGKZcokovQbpNuMb4Wy33BRx2mo',
